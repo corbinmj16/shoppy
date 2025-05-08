@@ -13,7 +13,7 @@ export default function Navigation() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#" className="text-indigo-400 hover:text-indigo-600 font-bold">
+                        <Link href="/cart" className="text-indigo-400 hover:text-indigo-600 font-bold">
                             Cart
                         </Link>
                     </li>
