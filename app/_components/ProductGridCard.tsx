@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ProductCard(props: { product: IProduct }) {
-    return <li className="flex flex-col gap-10 bg-white shadow-sm rounded-lg p-3">
+    return <article className="flex flex-col gap-10 bg-white shadow-sm rounded-lg p-3">
         <Image src={props.product.image} alt={props.product.title} width={200} height={200}
                style={{objectFit: "contain", objectPosition: "center"}}
                className="mx-auto h-40 w-auto"/>
@@ -32,5 +32,5 @@ export default function ProductCard(props: { product: IProduct }) {
                 to Cart
             </button>
         </div>
-    </li>;
+    </article>;
 }

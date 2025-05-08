@@ -8,8 +8,6 @@ interface ICart {
 
 export default async function CartPage() {
     try {
-        //https://fakestoreapi.com/carts/1
-        //https://fakestoreapi/carts/1
         const response = await fetch('https://fakestoreapi.com/carts/1')
         const cart: ICart = await response.json()
 
