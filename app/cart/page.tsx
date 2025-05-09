@@ -1,15 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductCart from "../_components/ProductCart";
 import { getStorage } from "../_lib/storage";
 import { IProduct } from "../_types/Products";
 import { removeFromCart } from "../_lib/productsCart";
 
 export default function CartPage() {
-  const [cartProducts, setCartProducts] = useState<[IProduct] | []>(
-    getStorage("cart")
-  );
+  const [cartProducts, setCartProducts] = useState<[IProduct] | []>([]);
+
+  useEffect(() => {
+    setCartProducts(getStorage("cart"));
+  }, []);
 
   function handleRemoveProduct(productId: number) {
     removeFromCart(productId);
