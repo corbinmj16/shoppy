@@ -12,7 +12,7 @@ export default function CartPage() {
   );
 
   function handleRemoveProduct(productId: number) {
-    const { message } = removeFromCart(productId);
+    removeFromCart(productId);
     setCartProducts(getStorage("cart"));
   }
 

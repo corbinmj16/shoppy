@@ -12,9 +12,9 @@ async function getProducts() {
       };
     }
 
-    const products: [IProduct] = await data.json();
+    const products: IProduct[] = await data.json();
     return {
-      products,
+      products: products.splice(0, 8),
       error: null,
     };
   } catch (e) {

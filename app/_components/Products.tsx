@@ -6,8 +6,8 @@ import ProductGrid from "./ProductGrid";
 import ProductList from "./ProductList";
 import ProductViewActions from "./ProductViewActions";
 
-export default function Products({ products }: { products: [IProduct] }) {
-  const [productView, setProductView] = useState<ProductViewOptions>("grid");
+export default function Products({ products }: { products: IProduct[] }) {
+  const [productView, setProductView] = useState<ProductViewOptions>("list");
 
   return (
     <>

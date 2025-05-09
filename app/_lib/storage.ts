@@ -8,7 +8,7 @@ export function getStorage(key: string) {
     return JSON.parse(data);
 }
 
-export function setStorage(key: string, data: any) {
+export function setStorage(key: string, data: object) {
     window.localStorage.setItem(key, JSON.stringify(data));
 }
 

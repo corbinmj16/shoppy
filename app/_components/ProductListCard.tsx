@@ -33,16 +33,14 @@ export default function ProductCard({ product }: { product: IProduct }) {
 
         <p className="text-gray-500 line-clamp-3">{product.description}</p>
 
-        <div className="flex justify-between items-center mt-10 gap-5">
-          <div className="flex gap-4 items-center self-end">
-            <Link
-              href={`product/${product.id}`}
-              className="text-indigo-500 font-bold hover:text-indigo-700 hover:cursor-pointer"
-            >
-              View
-            </Link>
-            <ButtonAddToCart product={product} />
-          </div>
+        <div className="flex gap-4 items-center justify-end">
+          <Link
+            href={`product/${product.id}`}
+            className="text-indigo-500 font-bold hover:text-indigo-700 hover:cursor-pointer"
+          >
+            View
+          </Link>
+          <ButtonAddToCart product={product} />
         </div>
       </div>
     </article>

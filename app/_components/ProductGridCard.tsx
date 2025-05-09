@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { IProduct } from "@/app/_types/Products";
 import Image from "next/image";
 import Link from "next/link";
 
-import SimpleAlert from "./SimpleAlert";
 import ButtonAddToCart from "./ButtonAddToCart";
 
 export default function ProductCard({ product }: { product: IProduct }) {
@@ -34,7 +32,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
         <p className="text-gray-500 line-clamp-3">{product.description}</p>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-auto">
         <div className="mt-auto flex gap-5 self-end items-center relative">
           <Link
             href={`product/${product.id}`}

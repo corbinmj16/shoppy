@@ -21,6 +21,12 @@ export function addToCart(product: IProduct) {
     }
 }
 
+export function getCart() {
+    const existingCart = getStorage(cartKey) || []
+
+    return existingCart;
+}
+
 export function removeFromCart(productId: number) {
     const existingCart = getStorage(cartKey) || []
 
