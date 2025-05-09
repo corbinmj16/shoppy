@@ -1,55 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { LayoutList, LayoutGrid } from "lucide-react";
-import { IProduct } from "../_types/Products";
+import { IProduct, ProductViewOptions } from "../_types/Products";
 import ProductGrid from "./ProductGrid";
 import ProductList from "./ProductList";
-import IslandContainer from "./IslandContainer";
+import ProductViewActions from "./ProductViewActions";
 
 export default function Products({ products }: { products: [IProduct] }) {
-  const [productView, setProductView] = useState("list");
+  const [productView, setProductView] = useState<ProductViewOptions>("grid");
 
   return (
     <>
-      <ul className="flex gap-4 justify-end">
-        <li>
-          <IslandContainer
-            className={`flex ${
-              productView === "list" ? "shadow-indigo-500" : ""
-            }`}
-          >
-            <button
-              type="button"
-              onClick={() => setProductView("list")}
-              className={`${
-                productView === "list" ? "text-indigo-500" : ""
-              } hover:cursor-pointer hover:text-indigo-700`}
-            >
-              <span className="sr-only">List Layout</span>
-              <LayoutList />
-            </button>
-          </IslandContainer>
-        </li>
-        <li>
-          <IslandContainer
-            className={`flex ${
-              productView === "grid" ? "shadow-indigo-500" : ""
-            }`}
-          >
-            <button
-              type="button"
-              onClick={() => setProductView("grid")}
-              className={`${
-                productView === "grid" ? "text-indigo-500" : ""
-              } hover:cursor-pointer hover:text-indigo-700`}
-            >
-              <span className="sr-only">Grid Layout</span>
-              <LayoutGrid />
-            </button>
-          </IslandContainer>
-        </li>
-      </ul>
+      <ProductViewActions
+        productView={productView}
+        setProductView={setProductView}
+      />
 
       {productView === "grid" ? (
         <ProductGrid products={products} />

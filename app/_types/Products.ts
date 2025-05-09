@@ -10,3 +10,5 @@ export interface IProduct {
         count: number;
     }
 }
+
+export type ProductViewOptions = "grid" | "list"

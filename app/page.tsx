@@ -8,7 +8,7 @@ async function getProducts() {
     if (!data.ok) {
       return {
         products: null,
-        error: "Failed to fetch products.",
+        error: "Failed to fetch products. Try refreshing the page.",
       };
     }
 

@@ -15,7 +15,7 @@ export default function Navigation() {
             <li>
               <Link
                 href="/cart"
-                className="text-indigo-400 hover:text-indigo-600 font-bold"
+                className="text-indigo-500 hover:text-indigo-700 font-bold"
               >
                 <span className="sr-only">Shopping Cart</span>
                 <ShoppingCart />
