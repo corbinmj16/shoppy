@@ -5,7 +5,15 @@ export default function Footer() {
   return (
     <footer className="mt-10 flex flex-col items-center justify-center space-y-4 border-t pt-10 border-zinc-100">
       <p className="text-sm font-mono text-zinc-500">
-        This demo site was create by Corbin Jensen to demo the use of:
+        This demo site was create by{" "}
+        <a
+          href="https://corbin.vercel.app"
+          target="_blank"
+          className="text-indigo-500 hover:text-indigo-700"
+        >
+          Corbin Jensen
+        </a>{" "}
+        to demo the use of:
       </p>
       <ul className="font-mono text-sm text-zinc-500 grid grid-cols-2 md:grid-cols-3 gap-6 ">
         <li>React</li>
