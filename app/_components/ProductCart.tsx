@@ -10,13 +10,13 @@ export default function ProductCart({
   handleRemoveProduct: (productId: number) => void;
 }) {
   return (
-    <article className="grid grid-cols-3 gap-4 bg-white shadow-sm rounded-lg p-3">
+    <article className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white shadow-sm rounded-lg p-3">
       <Image
         src={product.image}
         alt={product.title}
         width={120}
         height={120}
-        className="w-30 h-30 object-contain object-center col-span-1"
+        className="self-center mx-auto object-contain object-center col-span-1"
       />
 
       <div className="col-span-2 flex flex-col gap-2">
@@ -28,7 +28,7 @@ export default function ProductCart({
           <span className="sr-only">Remove</span>
           <X />
         </button>
-        <h2 className="font-mono text-lg font-bold">{product.title}</h2>
+        <h2 className="font-mono text-base font-bold">{product.title}</h2>
         <p>${product.price}</p>
       </div>
     </article>

@@ -22,12 +22,12 @@ export default function ProductCard({ product }: { product: IProduct }) {
         </h2>
         <div className="flex justify-between">
           <p className="text-lg">${product.price}</p>
-          <div className="flex flex-col text-center">
+          {/* <div className="flex flex-col text-center">
             <p className="text-sm text-amber-400 font-bold">
               {product.rating.rate} / 5
             </p>
             <p className="text-sm">{product.rating.count} Reviews</p>
-          </div>
+          </div> */}
         </div>
         <p className="text-gray-500 line-clamp-3">{product.description}</p>
       </div>

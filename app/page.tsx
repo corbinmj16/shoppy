@@ -1,9 +1,9 @@
-import { IProduct } from "@/app/_types/Products";
+import { IProduct, IProductsResponse } from "@/app/_types/Products";
 import Products from "./_components/Products";
 
 async function getProducts() {
   try {
-    const data = await fetch("https://fakestoreapi.com/products");
+    const data = await fetch("https://fakestoreapi.in/api/products");
 
     if (!data.ok) {
       return {
@@ -12,7 +12,9 @@ async function getProducts() {
       };
     }
 
-    const products: IProduct[] = await data.json();
+    const response: IProductsResponse = await data.json();
+    const products: IProduct[] = response.products;
+
     return {
       products: products.splice(0, 8),
       error: null,

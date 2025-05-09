@@ -4,6 +4,8 @@ import Link from "next/link";
 import ButtonAddToCart from "./ButtonAddToCart";
 
 export default function ProductCard({ product }: { product: IProduct }) {
+  console.log("image: ", product);
+
   return (
     <article className="grid grid-cols-1 md:grid-cols-3 gap-10 bg-white shadow-sm rounded-lg p-3">
       <Image
@@ -23,12 +25,12 @@ export default function ProductCard({ product }: { product: IProduct }) {
         <div className="flex justify-between items-center">
           <p className="text-lg">${product.price}</p>
 
-          <div className="flex flex-col">
+          {/* <div className="flex flex-col">
             <p className="text-sm text-amber-400 font-bold">
               {product.rating.rate} Rating
             </p>
             <p className="text-sm">{product.rating.count} Reviews</p>
-          </div>
+          </div> */}
         </div>
 
         <p className="text-gray-500 line-clamp-3">{product.description}</p>
