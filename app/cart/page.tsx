@@ -25,12 +25,12 @@ export default function CartPage() {
         <p className="text-zinc-500 text-lg">Go on now, check out!</p>
       </div>
 
-      {cartProducts.length <= 0 ? (
+      {cartProducts?.length <= 0 ? (
         <p className="text-center text-gray-500">
           You have no products in your cart 🫤
         </p>
       ) : (
-        cartProducts.map((product: IProduct) => (
+        cartProducts?.map((product: IProduct) => (
           <ProductCart
             key={product.id}
             product={product}
